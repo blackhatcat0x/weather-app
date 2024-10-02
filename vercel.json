@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "apps/weather-app/package.json",
+        "src": "apps/weather-app/next.config.js",
         "use": "@vercel/next"
       }
     ],
