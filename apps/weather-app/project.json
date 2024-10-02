@@ -19,6 +19,13 @@
         }
       }
     },
+    "dev": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "weather-app:build",
+        "dev": true
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "options": {
