@@ -4,6 +4,21 @@
   "sourceRoot": "apps/weather-app",
   "projectType": "application",
   "targets": {
+    "build": {
+      "executor": "@nrwl/next:build", 
+      "options": {
+        "outputPath": "dist/apps/weather-app", 
+        "root": "apps/weather-app", 
+        "fileReplacements": []
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,  
+          "sourceMap": false,  
+          "extractCss": true
+        }
+      }
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "options": {
@@ -18,4 +33,3 @@
   },
   "tags": []
 }
-
