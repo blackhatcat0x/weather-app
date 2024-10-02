@@ -1,0 +1,58 @@
+.forecastContainer {
+    margin-top: 0px;
+    text-align: left;
+    font-size: 1.4rem;
+    h3 {
+        margin:0;
+        padding:0;
+        margin-bottom:20px;
+    }
+  }
+  
+  .forecastGrid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .day {
+    background-color: #2d3a52;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 7vw;
+  
+    p {
+      margin: 5px 0;
+      font-size:1.2vw;
+      &.smalltemps 
+      {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding:0 10px;
+        small   
+        {
+            font-size:1vw;
+
+        }
+      }
+      small   
+      {
+          font-size:0.8vw;
+
+      }
+      &.conditions
+      {
+        margin:40px 0;
+      }
+    }
+ 
+  
+    .weatherIcon {
+        width: 7vw;
+        height: auto;
+        margin: -1vh -1vh -7vh -1vw;
+    }
+  }
+  

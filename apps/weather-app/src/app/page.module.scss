@@ -1,0 +1,275 @@
+@function pxToRem($px, $base: 16) {
+    @return #{$px / $base}rem;
+  }
+
+.page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: #1a1a2e;
+    color: white;
+  }
+  
+  .sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #1b2a41;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .mainContent {
+    flex: 1;
+    padding: 40px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1a1a2e;
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+        padding:0;
+        margin-top: -10px;
+      }
+
+      .dayOverview {
+        display: flex;
+        justify-content:space-between;
+      
+        .stat {
+          text-align: center;
+          margin: 0;
+          background-color: #2d3a52;
+          width:41%;
+          padding:10px 20px;
+          border-radius: 10px;
+      
+          p {
+            margin: 0;
+            &.conditions
+            {
+                font-size: 1.6rem;
+                margin:0;
+            }
+          }
+
+          .progressBarContainer {
+            width: 100%; 
+            position: relative;
+      
+            .percentValues
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                .minValue, .maxValue {
+                    font-size: 0.8rem;
+                    color: #fff;
+                    padding:0;
+                  }
+            }
+
+            .percent
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end; 
+                .perValue 
+                {
+                    text-align: right;
+                    padding-right:10px
+                }
+            }
+
+      
+          .progressBarWrapper {
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            width: 100%; 
+            height: 10px;
+            margin: 5px 0;
+            position: relative;
+          }
+      
+          .progressBar {
+            height: 100%;
+            border-radius: 10px;
+            background-color: #76ff03; /* Color for humidity */
+            position: absolute;
+            left: 0;
+            top: 0;
+            width:100%;
+            &.yellow {
+                background-color: #fdd835; /* Color for cloud cover */
+              }
+          }
+        }
+
+      }
+    }
+
+    .riseset 
+    {
+        text-align: center;
+        margin: 0;
+        background-color: #2d3a52;
+        width:20%;
+        padding: 20px 10px 10px 10px;
+        border-radius: 10px;
+        .innertemp 
+        {
+            font-size:1.4rem;
+        }
+    }
+  }
+  
+  .searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+  
+    .input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 220px;
+      background-color: #fff;
+      color: #000;
+    }
+  
+    .button {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+  
+      &:hover {
+        background-color: #f1c40f; 
+      }
+    }
+  }
+  
+  /* Weather Summary Styling */
+  .weatherSummary {
+    text-align: center;
+    margin-bottom: 40px;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    .temp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+  
+      img {
+        margin-left: 10px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+/* Day Overview Styling */
+.dayOverview {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+  
+
+
+    div {
+      text-align: center;
+
+
+  
+      p {
+        margin: 5px 0;
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  /* Forecast Section */
+  .forecast {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+    .day {
+      text-align: center;
+  
+      p {
+        font-size: 1rem;
+      }
+  
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 5px 0;
+      }
+    }
+  }
+  
+  /* Unit Toggle */
+.unitToggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+  
+    button {
+      background-color: #585676;
+      color: #fff;
+      padding: 8px 10px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 100%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border:none;
+      font-size: pxToRem(23); 
+  
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  
+    .active {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+  
+  .dayOverview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    div {
+      text-align: center;
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
