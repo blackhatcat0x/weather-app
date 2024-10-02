@@ -3,6 +3,19 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/weather-app",
   "projectType": "application",
-  "targets": {},
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/weather-app/**/*.ts",
+          "apps/weather-app/**/*.tsx",
+          "apps/weather-app/**/*.js",
+          "apps/weather-app/**/*.jsx"
+        ]
+      }
+    }
+  },
   "tags": []
 }
+

@@ -10,7 +10,7 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "@next/next/no-html-link-for-pages": ["error", "apps/weather-app/pages"]
+        "@next/next/no-html-link-for-pages": ["error", "apps/weather-app/app"]  // Changed from "pages" to "app"
       }
     },
     {
